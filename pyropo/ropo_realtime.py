@@ -75,7 +75,7 @@ def init():
     for site in list(OPTIONS):
         opts = options()
         
-        for k in site.attrib.keys():
+        for k in list(site.attrib.keys()):
             if   k == "parameters": opts.params = site.attrib[k]
             elif k == "threshold": opts.threshold = site.attrib[k]
             elif k == "highest-elev": opts.elev = float(site.attrib[k])
